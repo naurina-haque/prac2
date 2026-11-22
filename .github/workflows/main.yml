@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Docker Image
-        run: docker build -t task .
+        run: docker build -t task ./src/task
 
       - name: Run Test Cases
         run: docker run --rm --entrypoint java task task.a1_task2Test
